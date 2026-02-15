@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import React from 'react';
 import { CheckCircle, ArrowRight, Clock, Star, Phone, Mail, FileText, Calculator, BookOpen, Receipt, Users, PiggyBank, TrendingUp, Building, FileCheck, UserCheck, Building2, Search, Shield, Target, LineChart, Heart } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
@@ -52,6 +53,14 @@ export default function ServicePage({ params }: ServicePageProps) {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs
+            items={[
+              { label: 'Services', href: '/services' },
+              { label: service.title },
+            ]}
+            currentPath={`/services/${service.slug}`}
+            className="mb-8"
+          />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}

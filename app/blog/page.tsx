@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Search, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -28,6 +29,7 @@ export default function Blog() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Insights' }]} className="mb-8 justify-center" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -35,14 +37,11 @@ export default function Blog() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Our{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                Blog
-              </span>
+              Accounting & Tax Insights
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Stay informed with the latest tax updates, business insights, and financial tips 
-              from our team of expert accountants.
+              Expert tax tips, HMRC updates and bookkeeping advice from our London accountants. 
+              Stay compliant, save tax and grow your business.
             </p>
           </motion.div>
         </div>

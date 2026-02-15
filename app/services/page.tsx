@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Search, Filter, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -29,6 +30,7 @@ export default function Services() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Our Services' }]} className="mb-8 justify-center" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,14 +38,11 @@ export default function Services() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Our{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                Professional Services
-              </span>
+              UK Accounting Services for London Businesses
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              Comprehensive accounting, tax, and financial services tailored to meet the unique needs
-              of your business. From startups to established companies, we have the expertise to help you succeed.
+              From bookkeeping and VAT to corporation tax and payroll—our accountants in London deliver 
+              full UK accounting services for startups, SMEs and individuals. Get a free quote today.
             </p>
           </motion.div>
         </div>

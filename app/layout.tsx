@@ -2,17 +2,21 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Layout from '@/components/Layout';
+import { SITE_CONFIG, getLocalBusinessSchema, getOrganizationSchema } from '@/lib/seo';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
   title: {
-    default: 'Ayyubi Accountants | Financial Accountants in the UK',
-    template: '%s | Ayyubi Accountants'
+    default: 'Accountants in London | Tax & Bookkeeping Services UK | Ayyubi Accountants',
+    template: '%s | Ayyubi Accountants',
   },
-  description: 'Expert accounting, tax, and financial services for businesses and individuals across the UK. Professional advice from qualified accountants since 2009.',
-  keywords: 'accountants, tax services, bookkeeping, VAT, payroll, London, UK, accounting services, business advisory',
-  authors: [{ name: 'Ayyubi Accountants' }],
+  description:
+    'Leading accountants in London. Expert tax, bookkeeping, payroll & HMRC support for small businesses, startups & individuals. Free consultation. Call +44 7402 448109.',
+  keywords:
+    'accountants in London, tax accountant London, small business accountant UK, bookkeeping services UK, HMRC tax help, affordable accountant London, accounting firm London',
+  authors: [{ name: 'Ayyubi Accountants', url: SITE_CONFIG.url }],
   creator: 'Ayyubi Accountants',
   publisher: 'Ayyubi Accountants',
   robots: {
@@ -29,30 +33,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://ayyubiaccountants.co.uk',
-    siteName: 'Ayyubi Accountants',
-    title: 'Ayyubi Accountants | Financial Accountants',
-    description: 'Expert accounting, tax, and financial services for businesses and individuals across the UK.',
+    url: SITE_CONFIG.url,
+    siteName: SITE_CONFIG.name,
+    title: 'Accountants in London | Tax & Bookkeeping | Ayyubi Accountants',
+    description:
+      'Expert accountants in London. Tax, bookkeeping, payroll & HMRC support for SMEs. Free consultation.',
     images: [
       {
-        url: 'https://images.pexels.com/photos/7683100/pexels-photo-7683100.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&dpr=2',
+        url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Ayyubi Accountants - Financial Accountants',
+        alt: 'Ayyubi Accountants - Expert Accountants in London',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ayyubi Accountants | Financial Accountants',
-    description: 'Expert accounting, tax, and financial services for businesses and individuals across the UK.',
-    images: ['https://images.pexels.com/photos/7683100/pexels-photo-7683100.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&dpr=2'],
-  },
-  verification: {
-    google: 'your-google-verification-code',
+    title: 'Accountants in London | Ayyubi Accountants',
+    description: 'Expert tax, bookkeeping & HMRC support for London businesses. Free consultation.',
+    images: [SITE_CONFIG.ogImage],
   },
   alternates: {
-    canonical: 'https://ayyubiaccountants.co.uk',
+    canonical: SITE_CONFIG.url,
   },
 };
 
@@ -72,32 +74,13 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "AccountingService",
-              "name": "Ayyubi Accountants",
-              "description": "Professional accounting, tax, and financial services for businesses and individuals across the UK.",
-              "url": "https://ayyubiaccountants.co.uk",
-              "telephone": "+44 7402 448109",
-              "email": "info@ayyubiaccountants.co.uk",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "149 Commercial Road",
-                "addressLocality": "London",
-                "postalCode": "E1 1PX",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "51.5158",
-                "longitude": "-0.0986"
-              },
-              "openingHours": ["Mo-Fr 09:00-18:00", "Sa 10:00-14:00"],
-              "sameAs": [
-                "https://www.facebook.com/ayyubiaccountants",
-                "https://www.linkedin.com/company/ayyubi-accountants"
-              ]
-            })
+            __html: JSON.stringify(getLocalBusinessSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getOrganizationSchema()),
           }}
         />
       </head>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -28,6 +29,7 @@ export default function FAQ() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: 'FAQ' }]} className="mb-8 justify-center" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -35,10 +37,7 @@ export default function FAQ() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Frequently Asked{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                Questions
-              </span>
+              Accounting & Tax FAQ
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
               Find answers to common questions about our accounting services, pricing, and processes.

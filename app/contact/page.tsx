@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 
@@ -14,7 +15,7 @@ const contactInfo = [
       "United Kingdom"
     ],
     action: "Get Directions",
-    href: "https://maps.google.com"
+    href: "https://maps.google.com/?q=149+Commercial+Road+London+E1+1PX"
   },
   {
     icon: Phone,
@@ -57,6 +58,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Contact' }]} className="mb-8 justify-center" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,14 +66,11 @@ export default function Contact() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Get in{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                Touch
-              </span>
+              Get a Free Quote from London Accountants
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Ready to take control of your finances? We are here to help. Contact us today
-              for a free consultation and discover how we can support your financial success.
+              Ready for expert HMRC support and tax advice? Contact our accountants in London today 
+              for a free consultation. Call, WhatsApp or visit us at 149 Commercial Road, E1 1PX.
             </p>
           </motion.div>
         </div>
@@ -141,7 +140,7 @@ export default function Contact() {
                 </h3>
                 <div className="aspect-video rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5634524073983!2d-0.09862568423027!3d51.515618979636925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2f0b7b7e05%3A0x9b82c4b7a8e9d7f!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1635789123456!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5634524073983!2d-0.09862568423027!3d51.515618979636925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2f0b7b7e05%3A0x9b82c4b7a8e9d7f!2s149%20Commercial%20Rd%2C%20London%20E1%201PX!5e0!3m2!1sen!2suk!4v1635789123456!5m2!1sen!2suk"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

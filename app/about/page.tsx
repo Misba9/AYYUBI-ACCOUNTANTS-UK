@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { 
   Award, 
   Users, 
@@ -51,6 +52,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Who We Are' }]} className="mb-8" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -58,15 +60,12 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                About{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                  Ayyubi Accountants
-                </span>
+                Trusted Accountants in London Since 2009
               </h1>
               <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-                For over 15 years, we have been providing exceptional accounting and financial services
-                to businesses and individuals across the UK. Our commitment to excellence and
-                personalised service has made us a trusted partner for financial success.
+                For over 15 years, Ayyubi Accountants has been the go-to accounting firm in London for SMEs, 
+                startups and individuals. We combine HMRC expertise with compliance focus to help you save tax, 
+                stay compliant and grow. Your trusted small business accountant in the UK.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {achievements.map((achievement, index) => (
@@ -97,7 +96,7 @@ export default function About() {
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="https://images.pexels.com/photos/7683100/pexels-photo-7683100.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
-                  alt="Ayyubi Accountants Office"
+                  alt="Ayyubi Accountants - Expert accounting firm in London serving UK businesses"
                   fill
                   className="object-cover"
                 />

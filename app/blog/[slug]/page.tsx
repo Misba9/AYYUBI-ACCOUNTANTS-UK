@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Image from 'next/image';
 import { Calendar, Clock, User, ArrowLeft, Share2, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -36,14 +37,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* Back link */}
-            <Link
-              href="/blog"
-              className="inline-flex items-center text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 mb-8 font-medium"
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Blog
-            </Link>
+            <Breadcrumbs
+              items={[
+                { label: 'Insights', href: '/blog' },
+                { label: post.title },
+              ]}
+              currentPath={`/blog/${post.slug}`}
+              className="mb-8"
+            />
 
             {/* Category badge */}
             <span className="inline-block bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full mb-4">

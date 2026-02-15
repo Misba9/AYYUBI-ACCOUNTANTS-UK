@@ -11,7 +11,8 @@ import {
   Twitter, 
   Linkedin, 
   Instagram,
-  ArrowRight
+  ArrowRight,
+  MessageCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -187,6 +188,17 @@ export default function Footer() {
                   Sat: 10:00 AM - 2:00 PM<br />
                   Sun: Closed
                 </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MessageCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+                <a 
+                  href="https://wa.me/447402448109" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                >
+                  WhatsApp: +44 7402 448109
+                </a>
               </div>
             </div>
           </div>

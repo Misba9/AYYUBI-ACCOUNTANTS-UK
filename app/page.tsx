@@ -29,28 +29,28 @@ const featuredServices = services.slice(0, 6);
 const whyChooseUs = [
   {
     icon: Users,
-    title: "Expert Team",
-    description: "Qualified accountants with decades of combined experience."
+    title: "HMRC Expertise",
+    description: "Our qualified accountants handle tax investigations, self assessment and corporation tax with full HMRC support."
   },
   {
     icon: Clock,
-    title: "Timely Service",
-    description: "We meet all deadlines with our efficient and reliable processes."
+    title: "Deadline Compliant",
+    description: "Never miss a filing. We meet all Companies House and HMRC deadlines with reliable UK accounting services."
   },
   {
     icon: Shield,
-    title: "Secure & Confidential",
-    description: "Your data is protected with bank-level security measures."
+    title: "Compliance Focus",
+    description: "GDPR compliant, secure data handling. Your bookkeeping and tax records are protected."
   },
   {
     icon: TrendingUp,
-    title: "Growth Focused",
-    description: "Strategic advice to help your business grow and succeed."
+    title: "Tax Saving Focus",
+    description: "Strategic business tax planning to minimise liability and help your SME grow."
   },
   {
     icon: Phone,
-    title: "24/7 Support",
-    description: "We are always available when you need us most."
+    title: "Free Consultation",
+    description: "Speak to a London accountant today. No obligation—get expert advice and a quote."
   }
 ];
 
@@ -168,11 +168,11 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-              Why Choose Ayyubi Accountants?
+              UK Accounting Services for London Businesses
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              We combine professional expertise with personal service to deliver exceptional
-              accounting solutions tailored to your unique needs.
+              As trusted accountants in London, we combine HMRC expertise with compliance focus. 
+              From startups to established SMEs—bookkeeping, VAT, payroll and tax done right.
             </p>
           </motion.div>
 
@@ -212,11 +212,11 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-              Our Professional Services
+              Tax, Bookkeeping & Payroll in London
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              From tax preparation to business advisory services, we offer comprehensive
-              solutions to meet all your financial needs.
+              Full UK accounting services: self assessment, corporation tax, VAT, bookkeeping and payroll. 
+              Affordable accountant for small businesses and individuals in London.
             </p>
           </motion.div>
 
@@ -293,11 +293,11 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Get Your Free Consultation Today
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Take the first step toward financial clarity and success.
-              Contact us today for a free consultation and discover how we can help your business thrive.
+              Join hundreds of London businesses who trust us with their accounts. 
+              Free quote, no obligation. Call, WhatsApp or fill in the form—we respond within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
