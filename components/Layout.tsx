@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import { ThemeProvider } from 'next-themes';
 import Header from './Header';
 import Footer from './Footer';
+import PageLoader from './PageLoader';
 
 interface LayoutProps {
   children: ReactNode;
@@ -12,6 +13,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <PageLoader />
       <div className="min-h-screen bg-background text-foreground">
         <Header />
         <main>{children}</main>

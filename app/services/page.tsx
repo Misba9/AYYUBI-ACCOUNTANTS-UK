@@ -42,7 +42,7 @@ export default function Services() {
               </span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              Comprehensive accounting, tax, and financial services tailored to meet the unique needs 
+              Comprehensive accounting, tax, and financial services tailored to meet the unique needs
               of your business. From startups to established companies, we have the expertise to help you succeed.
             </p>
           </motion.div>
@@ -153,8 +153,8 @@ export default function Services() {
               Need a Custom Solution?
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-              Don't see exactly what you're looking for? We offer bespoke accounting and financial 
-              services tailored to your specific requirements. Let's discuss your needs.
+              Do not see exactly what you are looking for? We offer bespoke accounting and financial
+              services tailored to your specific requirements. Let us discuss your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -173,7 +173,7 @@ export default function Services() {
                 size="lg"
                 className="text-lg px-8 py-3 rounded-xl border-2"
               >
-                <Link href="tel:+442012345678">
+                <Link href="tel:+447402448109">
                   Call: +44 7402 448109
                 </Link>
               </Button>

@@ -119,7 +119,7 @@ export default function FAQ() {
                 No FAQs found
               </h3>
               <p className="text-slate-600 dark:text-slate-300 mb-6">
-                Try adjusting your search terms.
+                Try adjusting your search terms or browse all FAQs.
               </p>
               <button
                 onClick={() => setSearchTerm('')}
@@ -145,8 +145,8 @@ export default function FAQ() {
               Still Have Questions?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Can't find the answer you're looking for? Our expert team is here to help. 
-              Contact us for personalized assistance.
+              Cannot find the answer you are looking for? Our expert team is here to help.
+              Contact us for personalised assistance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -156,7 +156,7 @@ export default function FAQ() {
                 Contact Us
               </a>
               <a
-                href="tel:+442012345678"
+                href="tel:+447402448109"
                 className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-medium rounded-xl transition-all duration-300"
               >
                 Call: +44 7402 448109

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Ayyubi Accountants | Professional Accounting Services in the UK',
+    default: 'Ayyubi Accountants | Financial Accountants in the UK',
     template: '%s | Ayyubi Accountants'
   },
   description: 'Expert accounting, tax, and financial services for businesses and individuals across the UK. Professional advice from qualified accountants since 2009.',
@@ -31,20 +31,20 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://ayyubiaccountants.co.uk',
     siteName: 'Ayyubi Accountants',
-    title: 'Ayyubi Accountants | Professional Accounting Services',
+    title: 'Ayyubi Accountants | Financial Accountants',
     description: 'Expert accounting, tax, and financial services for businesses and individuals across the UK.',
     images: [
       {
         url: 'https://images.pexels.com/photos/7683100/pexels-photo-7683100.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&dpr=2',
         width: 1200,
         height: 630,
-        alt: 'Ayyubi Accountants - Professional Accounting Services',
+        alt: 'Ayyubi Accountants - Financial Accountants',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ayyubi Accountants | Professional Accounting Services',
+    title: 'Ayyubi Accountants | Financial Accountants',
     description: 'Expert accounting, tax, and financial services for businesses and individuals across the UK.',
     images: ['https://images.pexels.com/photos/7683100/pexels-photo-7683100.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&dpr=2'],
   },

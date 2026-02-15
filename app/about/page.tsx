@@ -40,7 +40,6 @@ const values = [
 ];
 
 const achievements = [
-  { number: "---", label: "Happy Clients" },
   { number: "--", label: "Years Experience" },
   { number: "98%", label: "Client Retention" },
   { number: "24/7", label: "Support Available" }
@@ -65,9 +64,9 @@ export default function About() {
                 </span>
               </h1>
               <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-                For over 15 years, we've been providing exceptional accounting and financial services 
-                to businesses and individuals across the UK. Our commitment to excellence and 
-                personalized service has made us a trusted partner for financial success.
+                For over 15 years, we have been providing exceptional accounting and financial services
+                to businesses and individuals across the UK. Our commitment to excellence and
+                personalised service has made us a trusted partner for financial success.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {achievements.map((achievement, index) => (
@@ -139,9 +138,9 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                To provide exceptional accounting and financial services that empower our clients 
-                to make informed business decisions, achieve their financial goals, and focus on 
-                what they do best. We are committed to delivering personalized solutions with 
+                To provide exceptional accounting and financial services that empower our clients
+                to make informed business decisions, achieve their financial goals, and focus on
+                what they do best. We are committed to delivering personalised solutions with
                 integrity, professionalism, and excellence.
               </p>
             </motion.div>
@@ -160,9 +159,9 @@ export default function About() {
                 Our Vision
               </h2>
               <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                To be the most trusted and innovative accounting firm in the UK, recognized for 
-                our expertise, client-centric approach, and commitment to helping businesses 
-                thrive. We envision a future where every client feels confident about their 
+                To be the most trusted and innovative accounting firm in the UK, recognised for
+                our expertise, client-centric approach, and commitment to helping businesses
+                thrive. We envision a future where every client feels confident about their
                 financial decisions and empowered to achieve sustainable growth.
               </p>
             </motion.div>
@@ -297,8 +296,8 @@ export default function About() {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who trust us with their financial success. 
-              Let's discuss how we can help your business grow.
+              Join hundreds of satisfied clients who trust us with their financial success.
+              Let us discuss how we can help your business grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

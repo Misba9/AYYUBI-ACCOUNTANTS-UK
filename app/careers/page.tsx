@@ -59,7 +59,7 @@ export default function Careers() {
               </span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              Build your career with a leading accounting firm that values professional growth, 
+              Build your career with a leading accounting firm that values professional growth,
               work-life balance, and team collaboration. Discover exciting opportunities to make a difference.
             </p>
             <div className="flex items-center justify-center space-x-8 text-sm text-slate-600 dark:text-slate-400">
@@ -94,7 +94,7 @@ export default function Careers() {
               Why Work With Us?
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              We invest in our people and provide an environment where you can thrive both 
+              We invest in our people and provide an environment where you can thrive both
               personally and professionally.
             </p>
           </motion.div>
@@ -138,7 +138,7 @@ export default function Careers() {
               Current Opportunities
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300">
-              Explore our open positions and take the next step in your career
+              Explore our open positions and take the next step in your career.
             </p>
           </motion.div>
 
@@ -225,7 +225,7 @@ export default function Careers() {
                 No Open Positions
               </h3>
               <p className="text-slate-600 dark:text-slate-300 mb-6">
-                We don't have any open positions at the moment, but we're always interested 
+                We do not have any open positions at the moment, but we are always interested
                 in hearing from talented professionals.
               </p>
               <Button asChild variant="outline">
@@ -251,8 +251,8 @@ export default function Careers() {
               Don't See the Right Role?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals to join our team. 
-              Send us your CV and we'll keep you in mind for future opportunities.
+              We are always looking for talented individuals to join our team.
+              Send us your CV and we will keep you in mind for future opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -269,7 +269,7 @@ export default function Careers() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3 rounded-xl"
+                className="border-white text-blue-600 hover:bg-white hover:text-blue-600 text-lg px-8 py-3 rounded-xl"
               >
                 <Link href="mailto:careers@ayyubiaccountants.co.uk">
                   Email: careers@ayyubiaccountants.co.uk

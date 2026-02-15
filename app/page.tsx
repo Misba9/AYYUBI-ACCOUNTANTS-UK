@@ -12,7 +12,9 @@ import {
   Clock,
   Shield,
   Phone,
-  Star
+  Star,
+  MapPin,
+  Mail
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import HeroCarousel from '@/components/HeroCarousel';
@@ -28,40 +30,61 @@ const whyChooseUs = [
   {
     icon: Users,
     title: "Expert Team",
-    description: "Qualified accountants with decades of combined experience"
+    description: "Qualified accountants with decades of combined experience."
   },
   {
     icon: Clock,
     title: "Timely Service",
-    description: "Meet all deadlines with our efficient and reliable processes"
+    description: "We meet all deadlines with our efficient and reliable processes."
   },
   {
     icon: Shield,
     title: "Secure & Confidential",
-    description: "Your data is protected with bank-level security measures"
+    description: "Your data is protected with bank-level security measures."
   },
   {
     icon: TrendingUp,
     title: "Growth Focused",
-    description: "Strategic advice to help your business grow and succeed"
-  },
-  {
-    icon: Award,
-    title: "Proven Track Record",
-    description: "Trusted by hundreds of businesses across the UK"
+    description: "Strategic advice to help your business grow and succeed."
   },
   {
     icon: Phone,
     title: "24/7 Support",
-    description: "Always available when you need us most"
+    description: "We are always available when you need us most."
   }
 ];
 
 const stats = [
-  { number: 0, suffix: '+', label: 'Happy Clients' },
   { number: 0, suffix: '+', label: 'Years Experience' },
   { number: 0, suffix: '+', label: 'Returns Filed' },
   { number: 98, suffix: '%', label: 'Client Satisfaction' }
+];
+
+const infoZoneItems = [
+  {
+    icon: Phone,
+    label: 'Call Us',
+    value: '+44 7402 448109',
+    href: 'tel:+447402448109'
+  },
+  {
+    icon: Mail,
+    label: 'Email',
+    value: 'info@ayyubiaccountants.co.uk',
+    href: 'mailto:info@ayyubiaccountants.co.uk'
+  },
+  {
+    icon: MapPin,
+    label: 'Office',
+    value: '149 Commercial Road, London E1 1PX',
+    href: 'https://maps.google.com/?q=149+Commercial+Road+London+E1+1PX'
+  },
+  {
+    icon: Clock,
+    label: 'Hours',
+    value: 'Mon–Fri 9am–6pm, Sat 10am–2pm',
+    href: null
+  }
 ];
 
 export default function Home() {
@@ -69,6 +92,45 @@ export default function Home() {
     <div className="pt-0 lg:pt-10">
       {/* Hero Section */}
       <HeroCarousel />
+
+      {/* Info Zone */}
+      <section id="info-zone" className="py-6 bg-slate-100 dark:bg-slate-800/50 border-y border-slate-200 dark:border-slate-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {infoZoneItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-4"
+              >
+                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                    {item.label}
+                  </div>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      className="text-slate-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors truncate block"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <span className="text-slate-900 dark:text-white font-medium">
+                      {item.value}
+                    </span>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-blue-600">
@@ -109,7 +171,7 @@ export default function Home() {
               Why Choose Ayyubi Accountants?
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              We combine professional expertise with personal service to deliver exceptional 
+              We combine professional expertise with personal service to deliver exceptional
               accounting solutions tailored to your unique needs.
             </p>
           </motion.div>
@@ -153,7 +215,7 @@ export default function Home() {
               Our Professional Services
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              From tax preparation to business advisory services, we offer comprehensive 
+              From tax preparation to business advisory services, we offer comprehensive
               solutions to meet all your financial needs.
             </p>
           </motion.div>
@@ -234,7 +296,7 @@ export default function Home() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Take the first step towards financial clarity and success. 
+              Take the first step toward financial clarity and success.
               Contact us today for a free consultation and discover how we can help your business thrive.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -252,9 +314,9 @@ export default function Home() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3 rounded-xl"
+                className="border-white text-blue-600  hover:bg-white hover:text-blue-600 text-lg px-8 py-3 rounded-xl"
               >
-                <Link href="tel:+442012345678">
+                <Link href="tel:+447402448109">
                   Call Now: +44 7402 448109
                 </Link>
               </Button>

@@ -31,6 +31,7 @@ const quickLinks = [
   { name: 'Blog', href: '/blog' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
+  { name: 'Info Zone', href: '/#info-zone' },
   { name: 'FAQ', href: '/faq' }
 ];
 
@@ -48,7 +49,7 @@ export default function Footer() {
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
             <p className="text-slate-300 mb-8">
-              Get the latest tax updates, business tips, and accounting insights delivered to your inbox.
+              Receive the latest tax updates, business tips, and accounting insights delivered to your inbox.
             </p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <Input
@@ -76,11 +77,11 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-xl font-bold">Ayyubi Accountants</div>
-                <div className="text-sm text-slate-400">Professional Accounting Services</div>
+                <div className="text-sm text-slate-400">Financial Accountants</div>
               </div>
             </div>
             <p className="text-slate-300 mb-6 text-sm leading-relaxed">
-              Providing expert accounting, tax, and financial services to businesses and individuals 
+              We provide expert accounting, tax, and financial services to businesses and individuals
               across the UK. Your trusted partner for all accounting needs.
             </p>
             <div className="flex space-x-4">
@@ -164,7 +165,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" />
                 <a 
-                  href="tel:+442012345678" 
+                  href="tel:+447402448109" 
                   className="text-slate-300 hover:text-blue-400 transition-colors duration-200 text-sm"
                 >
                   +44 7402 448109

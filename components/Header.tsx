@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
@@ -9,13 +9,9 @@ import { Menu, X, Moon, Sun, ChevronDown, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { 
-    name: 'About', 
-    href: '/about'
-  },
+  { name: 'Who we are', href: '/about' },
   {
-    name: 'Services',
+    name: 'What we do',
     href: '/services',
     submenu: [
       { name: 'All Services', href: '/services' },
@@ -25,18 +21,34 @@ const navigation = [
       { name: 'Payroll', href: '/services?category=payroll' }
     ]
   },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Contact', href: '/contact' }
+  { name: 'Insights', href: '/blog' },
+  { name: 'Join us', href: '/careers' },
+  { name: 'Get in touch', href: '/contact' }
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
+
+  const handleDropdownEnter = (name: string) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setActiveDropdown(name);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+      dropdownTimeoutRef.current = null;
+    }, 200);
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -75,7 +87,7 @@ export default function Header() {
                     Ayyubi Accountants
                   </div>
                   <div className="text-sm text-slate-600 dark:text-slate-400">
-                    Professional Accounting Services
+                    Financial Accountants
                   </div>
                 </div>
               </Link>
@@ -86,16 +98,20 @@ export default function Header() {
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.submenu ? (
-                    <div className="relative">
-                      <button
-                        onClick={() => handleDropdownToggle(item.name)}
+                    <div
+                      className="relative"
+                      onMouseEnter={() => handleDropdownEnter(item.name)}
+                      onMouseLeave={handleDropdownLeave}
+                    >
+                      <Link
+                        href={item.href}
                         className="flex items-center px-4 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
                       >
                         {item.name}
                         <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
-                      </button>
+                      </Link>
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div

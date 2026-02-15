@@ -25,7 +25,7 @@ const contactInfo = [
       "Sat: 10:00 AM - 2:00 PM"
     ],
     action: "Call Now",
-    href: "tel:+442012345678"
+    href: "tel:+447402448109"
   },
   {
     icon: Mail,
@@ -42,12 +42,12 @@ const contactInfo = [
     icon: MessageCircle,
     title: "WhatsApp",
     details: [
-      "+44 7700 123456",
+      "+44 7402 448109",
       "Available 24/7",
       "Quick responses"
     ],
     action: "Message Us",
-    href: "https://wa.me/447700123456"
+    href: "https://wa.me/447402448109"
   }
 ];
 
@@ -70,7 +70,7 @@ export default function Contact() {
               </span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Ready to take control of your finances? We're here to help. Contact us today 
+              Ready to take control of your finances? We are here to help. Contact us today
               for a free consultation and discover how we can support your financial success.
             </p>
           </motion.div>
@@ -183,7 +183,7 @@ export default function Contact() {
                 </div>
                 <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                   <p className="text-sm text-blue-700 dark:text-blue-300">
-                    <strong>Emergency support available 24/7</strong> for existing clients during tax season.
+                    <strong>Emergency support is available 24/7</strong> for existing clients during tax season.
                   </p>
                 </div>
               </motion.div>
@@ -202,7 +202,7 @@ export default function Contact() {
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-slate-700 dark:text-slate-300">Email inquiries: Within 4 hours</span>
+                    <span className="text-slate-700 dark:text-slate-300">Email enquiries: Within 4 hours</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -240,16 +240,12 @@ export default function Contact() {
           <div className="space-y-6">
             {[
               {
-                question: "How quickly can you prepare my accounts?",
-                answer: "Most limited company accounts are completed within 5-7 working days of receiving all required documentation. For urgent cases, we offer a fast-track service with 2-3 day turnaround."
-              },
-              {
                 question: "Do you offer fixed-price quotes?",
-                answer: "Yes, we provide transparent, fixed-price quotes for all our services. No hidden fees or surprises - you'll know exactly what you'll pay upfront."
+                answer: "Yes, we provide transparent, fixed-price quotes for all our services. There are no hidden fees or surprises—you will know exactly what you will pay upfront."
               },
               {
                 question: "Can you help with HMRC investigations?",
-                answer: "Absolutely. Our experienced team can represent you throughout any HMRC inquiry or investigation, handling all correspondence and working to achieve the best possible outcome."
+                answer: "Absolutely. Our experienced team can represent you throughout any HMRC enquiry or investigation, handling all correspondence and working to achieve the best possible outcome."
               },
               {
                 question: "Do you work with cloud accounting software?",

@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 const heroSlides = [
   {
     id: 1,
-    title: "Professional Accounting Services",
+    title: "Financial Accountants",
     subtitle: "Expert financial solutions for your business success",
     description: "Comprehensive accounting, tax, and financial advisory services tailored to meet your unique business needs. Trust our qualified team to handle your finances while you focus on growing your business.",
     primaryCTA: {
@@ -20,18 +20,18 @@ const heroSlides = [
       text: "View Our Services",
       href: "/services"
     },
-    backgroundImage: "https://images.pexels.com/photos/7683100/pexels-photo-7683100.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
+    backgroundImage: "https://images.pexels.com/photos/4386325/pexels-photo-4386325.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
     stats: [
-      { number: "---", label: "Happy Clients" },
       { number: "--", label: "Years Experience" },
-      { number: "98%", label: "Client Satisfaction" }
+      { number: "98%", label: "Client Satisfaction" },
+      { number: "24/7", label: "Support" }
     ]
   },
   {
     id: 2,
     title: "Tax Planning & Compliance",
     subtitle: "Maximize your savings with expert tax advice",
-    description: "Stay compliant and minimize your tax liability with our comprehensive tax services. From self-assessment to corporation tax, we ensure you never miss a deadline or opportunity to save.",
+    description: "Stay compliant and minimise your tax liability with our comprehensive tax services. From self-assessment to corporation tax, we ensure you never miss a deadline or an opportunity to save.",
     primaryCTA: {
       text: "Book Tax Consultation",
       href: "/contact"
@@ -60,7 +60,7 @@ const heroSlides = [
       text: "Advisory Services",
       href: "/services?category=advisory"
     },
-    backgroundImage: "https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
+    backgroundImage: "https://images.pexels.com/photos/8296974/pexels-photo-8296974.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2",
     stats: [
       { number: "150+", label: "Businesses Grown" },
       { number: "£50M+", label: "Revenue Managed" },
@@ -83,7 +83,7 @@ export default function HeroCarousel() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [isPlaying]);
@@ -125,7 +125,7 @@ export default function HeroCarousel() {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -185,7 +185,7 @@ export default function HeroCarousel() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-3 rounded-xl border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+                className="text-lg px-8 py-3 rounded-xl border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm"
               >
                 <Link href={heroSlides[currentSlide].secondaryCTA.href}>
                   {heroSlides[currentSlide].secondaryCTA.text}
